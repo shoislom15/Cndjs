@@ -11,7 +11,7 @@ const renderInto = (data) => {
         get(render);
     }
 
-    const h3 = createElement("h3", "text-orange fs-1", data.name, container)
+    const h3 = createElement("h3", "text-orange fs-1 text-uppercase", data.name, container)
 
     const author = createElement("p", "author fs-5  text-white", `Author: ${data.authors[0].name}`, container)
     const version = createElement("p", "author fs-5  text-white", `Version: ${data.version}`, container)
