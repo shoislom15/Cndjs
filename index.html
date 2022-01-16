@@ -23,7 +23,7 @@
 
 </head>
 
-<body>
+<body onload="renderLoad()">
     <header>
         <div class="container-fluid d-flex align-items-center justify-content-between py-3 px-4">
             <div class="left d-flex align-items-center gap-4 fs-5">
@@ -34,27 +34,31 @@
                     href="https://github.com/cdnjs/cdnjs/discussions?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_nav"><i
                         class="fas fa-comments"></i></a>
             </div>
-            <div class="rignt">
-                <ul class="d-flex align-items-center fs-5">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Libraries</a></li>
-                    <li><a href="#">API</a></li>
-                    <li><a href="#">GitHub</a></li>
-                    <li><a href="#">Status</a></li>
-                </ul>
+            <div class="right">
+                <div class="about" id="about">
+                    <ul class="d-flex align-items-center fs-5">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Libraries</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                <button class="btn" onclick="show()"><i class="fa fa-bars" aria-hidden="true"></i></button>
             </div>
         </div>
     </header>
 
-    <!-- <section id="searchSection">
+    <section id="searchSection">
         <div class="container-fluid py-4 px-3">
             <h5 class="text-white fw-normal mb-5">
                 <span class="text-orange">Home</span> / <span class="text-orange">Libraries</span>
             </h5>
             <div class="row d-flext align-items-center justify-content-center">
                 <div class="col-9">
-                    <form action="" class="w-100 d-flex align-items-center p-1 fs-5 mb-3">
-                        <input type="text" class="w-100 p-2" placeholder="Search from 4103 libraries on cdnjs...">
+                    <form action="" id="searchForm" class="w-100 d-flex align-items-center p-1 fs-5 mb-3">
+                        <input type="text" id="techName" class="w-100 p-2"
+                            placeholder="Search from 4103 libraries on cdnjs...">
                         <button type="submit" class="p-1 me-2"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
                     <p class="text-center text-white fs-5"><span class="text-orange">4 103</span> libraries found in
@@ -62,9 +66,9 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
     <section id="cdns">
-        <div class="container p-3 px-5">
+        <!-- <div class="container p-3 px-5">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="box p-4">
@@ -82,7 +86,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 
 

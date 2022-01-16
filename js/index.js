@@ -20,17 +20,13 @@ const renderInto = (data) => {
     a.style.display = "inline-block"
     a.href = data.homepage;
 
-    console.log(data.assets[data.assets.length - 1].files);
-
-
-
 
     const files = data.assets[data.assets.length - 1].files;
 
     console.log(files);
 
     files.map((item) => {
-        const div = createElement('div', "d-flex bg-dark mb-3 rounded align-items-center p-3 d-flex align-items-center justify-content-between", "", container);
+        const div = createElement('div', "box d-flex bg-dark mb-3 rounded align-items-center p-3 d-flex align-items-center justify-content-between", "", container);
         const lin = createElement("p", "fs-5 text-orange m-0", `https://cdnjs.cloudflare.com/ajax/libs/${data.version}/${item}`, div);
 
         const right = createElement("div", "d-flex", "", div)
@@ -66,7 +62,7 @@ const renderInto = (data) => {
 
 }
 
-get(renderInto, `/vue`);
+// get(renderInto, `/vue`);
 
 
 const render = (data) => {
@@ -83,7 +79,7 @@ const render = (data) => {
 
 
     arr.map((e) => {
-        console.log(e);
+        // console.log(e);
         const col = createElement("div", "col-lg-6 col-md-6 col-sm-12  mb-4", "", row);
 
         const box = createElement("div", "box p-4 h-100", "", col);
@@ -119,5 +115,24 @@ const render = (data) => {
     })
 };
 
-get(render);
 
+
+
+const renderLoad = () => {
+    get(render);
+}
+
+
+// https://api.cdnjs.com/libraries?limit=20&search=react
+
+
+
+const search = (event) => {
+    event.preventDefault();
+    const techName = document.querySelector("#techName");
+    get(render, `?limit=40&search=${techName.value}`)
+}
+
+const searchForm = document.querySelector("#searchForm");
+
+searchForm.addEventListener("submit", search);

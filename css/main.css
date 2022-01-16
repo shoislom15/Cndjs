@@ -12,6 +12,7 @@ a {
 
 header {
   background-color: #343535;
+  position: relative;
 }
 header .container-fluid img {
   width: 140px;
@@ -25,6 +26,10 @@ header .container-fluid ul {
 header .container-fluid ul li a {
   text-decoration: none;
   color: white;
+}
+header .container-fluid .right button {
+  display: none;
+  color: #FF6934;
 }
 
 #searchSection {
@@ -60,20 +65,24 @@ header .container-fluid ul li a {
   word-break: break-all;
 }
 
+#searchSection .container {
+  min-height: 100vh;
+}
+#searchSection a {
+  text-decoration: none;
+}
+
 .btn:hover {
   color: #FF6934;
 }
 
-.container {
-  min-height: 100vh;
-}
-
-a {
-  text-decoration: none;
-}
-
-.mb-50 {
-  margin-bottom: 50px;
+@media screen and (max-width: 790px) {
+  header .right .about {
+    display: none;
+  }
+  header .right button {
+    display: inline-block !important;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

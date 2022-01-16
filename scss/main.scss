@@ -12,6 +12,7 @@ a{
 
 header{
     background-color: #343535;
+    position: relative;
 
     .container-fluid{
         img{
@@ -28,6 +29,13 @@ header{
                     text-decoration: none;
                     color: white;
                 }
+            }
+        }
+
+        .right{
+            button{
+                display: none;
+                color: #FF6934;
             }
         }
         
@@ -72,20 +80,52 @@ header{
     }
 }
 
+
+#searchSection{
+    .container{
+        min-height: 100vh;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
 .btn{
     &:hover{
         color: #FF6934;
     }
 }
 
-.container{
-    min-height: 100vh;
-}
 
-a{
-    text-decoration: none;
-}
 
-.mb-50{
-    margin-bottom: 50px;
+@media screen and (max-width: 790px) {
+    header{
+        .right{
+            .about{
+                display: none;
+            }
+            // position: relative;
+
+            // .about{
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     padding: 20px;
+            //     background-color: #343535;
+
+            //     ul{
+            //         display: flex; 
+            //         flex-direction: column;
+            //         justify-content: center;
+            //         gap: 15px;
+            //         text-align: left;
+            //     }
+            // }
+
+            button{
+                display: inline-block !important;
+            }
+        }
+    }
 }
