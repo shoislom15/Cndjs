@@ -24,9 +24,7 @@ const createElement = (tag = "div", className = "", innerHTML = "", father) => {
 const show = () => {
     const about = document.querySelector("#about");
 
-    if (about.classList.contains("d-none")) {
-        about.classList.remove("d-none");
-    } else {
-        about.classList.add("d-none");
-    }
+    about.classList.toggle("show")
 }
+
+// Media query

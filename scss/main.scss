@@ -1,5 +1,6 @@
 body{
     box-sizing: border-box;
+    position: relative;
 }
 
 a{
@@ -12,27 +13,33 @@ a{
 
 header{
     background-color: #343535;
-    position: relative;
+    position: sticky;
+    top: 0;
 
     .container-fluid{
         img{
             width: 140px;
         }
 
-        ul{
-            margin: 0;
-            padding: 0;
-            gap: 40px;
-            list-style-type: none;
-            li{
-                a{
-                    text-decoration: none;
-                    color: white;
+        .right{
+            
+            ul{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                list-style-type: none;
+                background-color: #343535;
+
+                li{
+                    a{
+                        text-decoration: none;
+                        color: white;
+                    }
                 }
             }
-        }
 
-        .right{
             button{
                 display: none;
                 color: #FF6934;
@@ -40,6 +47,38 @@ header{
         }
         
     }
+}
+
+@media screen and (max-width: 790px) {
+    header{
+        .right{
+            
+            ul{
+                position: fixed;
+                right: 0;
+                top: 70px;
+                width: 50%;
+                height: 100vh;
+                display: flex;
+                align-items: space-around;
+                justify-content: space-around;
+                flex-direction: column;
+                gap: none;
+                transform: translateX(100%);       
+                transition: 0.5s;         
+            }
+            
+            button{
+                display: inline-block !important;
+            }
+    
+        }
+
+    }
+}
+
+.show{
+    transform: translateX(0) !important;
 }
 
 #searchSection {
@@ -65,6 +104,10 @@ header{
             }
         }
     }
+
+    a{
+        text-decoration: none;
+    }
 }
 
 #cdns{
@@ -81,51 +124,8 @@ header{
 }
 
 
-#searchSection{
-    .container{
-        min-height: 100vh;
-    }
-    a{
-        text-decoration: none;
-    }
-}
-
 .btn{
     &:hover{
         color: #FF6934;
-    }
-}
-
-
-
-@media screen and (max-width: 790px) {
-    header{
-        .right{
-            .about{
-                display: none;
-            }
-            // position: relative;
-
-            // .about{
-            //     position: absolute;
-            //     top: 0;
-            //     left: 0;
-            //     width: 100%;
-            //     padding: 20px;
-            //     background-color: #343535;
-
-            //     ul{
-            //         display: flex; 
-            //         flex-direction: column;
-            //         justify-content: center;
-            //         gap: 15px;
-            //         text-align: left;
-            //     }
-            // }
-
-            button{
-                display: inline-block !important;
-            }
-        }
     }
 }

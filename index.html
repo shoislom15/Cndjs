@@ -26,7 +26,7 @@
 <body onload="renderLoad()">
     <header>
         <div class="container-fluid d-flex align-items-center justify-content-between py-3 px-4">
-            <div class="left d-flex align-items-center gap-4 fs-5">
+            <div class="left d-flex align-items-center justify-content-start gap-4 fs-5">
                 <img src="https://cdnjs.com/_/f7a2ebfb819c118086546e481876aef6.svg" alt="">
                 <a href="https://twitter.com/cdnjs?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_nav"><i
                         class="fab fa-twitter"></i></a>
@@ -35,15 +35,13 @@
                         class="fas fa-comments"></i></a>
             </div>
             <div class="right">
-                <div class="about" id="about">
-                    <ul class="d-flex align-items-center fs-5">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Libraries</a></li>
-                        <li><a href="#">API</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">Status</a></li>
-                    </ul>
-                </div>
+                <ul class="fs-5 about" id="about">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Libraries</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Status</a></li>
+                </ul>
                 <button class="btn" onclick="show()"><i class="fa fa-bars" aria-hidden="true"></i></button>
             </div>
         </div>
