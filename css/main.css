@@ -36,6 +36,9 @@ header .container-fluid .right button {
   display: none;
   color: #FF6934;
 }
+header .container-fluid a:hover {
+  color: #FF6934 !important;
+}
 
 @media screen and (max-width: 790px) {
   header .right ul {
@@ -97,6 +100,9 @@ header .container-fluid .right button {
 }
 
 .btn:hover {
+  color: #FF6934;
+}
+.btn:hover i {
   color: #FF6934;
 }
 

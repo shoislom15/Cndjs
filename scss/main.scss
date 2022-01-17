@@ -46,8 +46,14 @@ header{
             }
         }
         
+        a{
+            &:hover{
+                color: #FF6934 !important;
+            }
+        }
     }
 }
+
 
 @media screen and (max-width: 790px) {
     header{
@@ -125,7 +131,13 @@ header{
 
 
 .btn{
-    &:hover{
+    &:hover {
         color: #FF6934;
+    }
+
+    &:hover{
+        i{
+            color: #FF6934;
+        }
     }
 }

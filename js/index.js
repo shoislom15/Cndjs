@@ -73,7 +73,7 @@ const render = (data) => {
     const section = document.getElementById("cdns");
     section.innerHTML = "";
 
-    const container = createElement("div", "container p-3 p-5", "", section);
+    const container = createElement("div", "container p-3 p-5  px-sm-1", "", section);
 
     const row = createElement("div", "row", "", container);
 
